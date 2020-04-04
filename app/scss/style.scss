@@ -359,6 +359,20 @@ body{
         }
     }
 
+    &__link-container{
+
+        &--g-hidden{
+            display: none;
+
+            @include for-sm{
+                display: flex;
+                justify-content: center;
+
+                margin-top: 20px;
+            }
+        }
+    }
+
 
     
     &--big{
@@ -385,6 +399,10 @@ body{
 
         @include for-md{
             margin-right: 0;
+        }
+        @include for-sm{
+            margin: 0 auto;
+            
         }
     }
     &__select{
@@ -465,6 +483,11 @@ body{
 
     @include for-lit-desktop{
         font-size: 12px;
+    }
+
+    @include for-sm{
+
+        font-size: 20px;
     }
 
     &__icon{
@@ -993,10 +1016,37 @@ body{
 
         @include for-sm{
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
             width: 100%;
         }
+
+        &--hidden{
+            opacity: 0;
+            height: 0;
+            position: absolute;
+            top: -1000em;
+            overflow: hidden;
+
+            transition: .3s;
+
+            
+        }
+
+       
         
+    }
+
+    &__table-tr.active{
+        position: static;
+        opacity: 1;
+    }
+
+    &__table-tr + &__table-tr{
+        @include for-sm{
+
+            margin-top: 15px;
+        }
     }
     
     &__table-td{
@@ -1014,27 +1064,32 @@ body{
         @include for-sm{
             border-top: none;
             background-color: transparent;
+            width: 50%;
         }
 
         &:first-child{
             padding-left: 29px;
             width: 58%;
             @include for-sm{
-                width: 100%;
+                width: 50%;
                 padding-left: 0;
 
-                text-align: center;
+                text-align: left;
             }
         }
         &--center{
             text-align: center;
+
+            @include for-sm{
+                text-align: right;
+            }
         }
 
         &--coast{
 
            width: 173px;
            @include for-sm{
-               margin: 15px auto;
+               display: none;
            }
            @include for-tiny-mob{
                max-width: 500px;
@@ -1064,6 +1119,14 @@ body{
             background-color: $orange;
         }
 
+        &--hiden{
+            display: none;
+
+            @include for-sm{
+                display: block;
+            }
+        }
+
         @include for-sm{
             margin: 10px 0;
         }
@@ -1071,17 +1134,26 @@ body{
     &__button{
         display: block;
         max-width: 174px;
-        margin-left: 23.2%;
-        margin-top: 20px;
         width: 100%;
 
         text-transform: none;
 
+        &:before{
+            color: #fff;
+            content: 'Просмотреть все услуги';
+        }
+        
+
         @include for-md{
-            margin: 20px auto 0;
+           
         }
         @include for-tiny-mob{
             max-width: 100%;
+        }
+    }
+    &__button.active{
+        &:before{
+            content: "Скрыть";
         }
     }
 }
@@ -1114,6 +1186,108 @@ body{
 
         @include for-md{
             margin-right: 0;
+        }
+    }
+}
+.more{
+    padding: 39px 0 35px;
+    margin-left: 23.2%;
+
+
+    @include for-md{
+       padding: 30px 0;
+       margin-left: 0;
+    }
+    &__button{
+        max-width: 332px;
+        width: 100%;
+        padding: 14px;
+        flex-shrink: 0;
+
+        font-size: 14px;
+        line-height: 17px;
+        color: $orange;
+        text-align: center;
+        text-transform: uppercase;
+
+        border: 2px solid $orange;
+        background-color: transparent;
+        border-radius: 24.5px;
+
+        transition: .3s;
+
+        &:hover{
+            background-color: $orange;
+            color: $white;
+        }
+
+        @include for-md{
+            margin: 0 0 15px;
+        }
+        @include for-tiny-mob{
+            padding: 10px;
+
+            font-size: 12px;
+            line-height: 15px;
+
+        }
+    }
+    &__content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include for-sm{
+            flex-direction: column;
+        }
+    }
+
+    &__list{
+        display: flex;
+        align-items: center;
+
+        @include for-md{
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        @include for-sm{
+            margin-top: 25px;
+
+            justify-content: center;
+        }
+    }
+
+    &__list-label{
+
+        margin-right: 21px;
+
+        font-size: 18px;
+        line-height: 21px;
+        font-family: $CirleF;
+        font-weight: 700;
+        color: #cecece;
+        @include for-md{
+            margin-right: 10px;
+            margin-bottom: 20px;
+        }
+        @include for-sm{
+           width: 100%;
+           margin-right: 0;
+           margin-bottom: 20px;
+
+           text-align: center;
+        }
+    }
+    &__list-item + &__list-item{
+        margin-left: 21px;
+
+        @include for-md{
+            margin-left: 70px;
+        }
+
+        @include for-sm{
+            margin-left: 60px;
         }
     }
 }
@@ -1474,7 +1648,7 @@ body{
         border-radius: 28px;
 
         @include for-tiny-mob{
-            max-width: calc(100% - 40px);
+            max-width: 100%;
         }
     }
 }
@@ -1498,7 +1672,11 @@ body{
 
         @include for-tiny-tablet{
             height: 200px;
+            width: 100%;
+            max-width: 300px;
             margin: 0 auto 20px;
+            
+            border-radius: 0;
         }
     }
     &__image{
@@ -1509,6 +1687,10 @@ body{
         border-radius: 5px 0 0 5px;
         object-fit: cover;
         object-position: center;
+
+        @include for-tiny-tablet{
+            border-radius: 0;
+        }
     }
     &__content{
         padding: 21px 30px 21px 30px;
@@ -1612,9 +1794,9 @@ body{
         font-family: $CirleF;
         font-weight: 400;
 
-        @include for-tiny-tablet{
-            text-align: center;
-        }
+        // @include for-tiny-tablet{
+        //     text-align: center;
+        // }
     }
 
 }
@@ -1808,6 +1990,11 @@ body{
 
         border: 1px solid #1fb2f5;
         border-radius: 22.5px;
+
+        @include for-tiny-mob{
+            text-align: center;
+            padding: 40px 20px 5px;
+        }
 
     }
     &__form-bottom{

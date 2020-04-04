@@ -27,21 +27,48 @@ $(document).ready(function() {
   }
 
 });
+// // function getSecondsToTomorrow() {
+// //   let now = new Date();
+// //   let hour = now.getHours();
+// //   let minutes = now.getMinutes();
+// //   let seconds = now.getSeconds();
+// //   let totalSecondsToday = (hour * 60 + minutes) * 60 + seconds;
+// //   let totalSecondsInADay = 86400;
+
   
-document.addEventListener('DOMContentLoaded', () => {
 
-  // Unix timestamp (in seconds) to count down to
-  var twoDaysFromNow = (new Date().getTime() / 1000) + (86400 * 2) + 1;
+// //   return totalSecondsInADay - totalSecondsToday;
+// // }
+// // var timer = getSecondsToTomorrow();
 
-  // Set up FlipDown
-  var flipdown = new FlipDown(twoDaysFromNow)
+// //  console.log( 86400000 - ((new Date().getHours() * 60 + new Date().getMinutes()) * 60 + new Date().getSeconds()))
 
-    // Start the countdown
-    .start()
 
-   
+// // var timer2 =  ((new Date().getHours() * 60 + new Date().getMinutes()) * 60 + new Date().getSeconds()) 
+// // console.log(timer2)
 
+// function getSecondsToTomorrow() {
+//   let now = new Date();
+
+//   // завтрашняя дата
+//   let tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate()+1);
+
+//   let diff = tomorrow - now; // разница в миллисекундах
+//   return Math.round(diff / 1000); // преобразуем в секунды
+// }
+// console.log(new Date().getTime())
+
+
+new FlipDown((new Date().getTime() / 1000) - ((new Date().getHours() * 60 + new Date().getMinutes()) * 60 + new Date().getSeconds()) + 86400 )
+
+  // Start the countdown
+  .start()
+ 
+  // Do something when the countdown ends
+  .ifEnded(() => {
+    console.log('The countdown has ended!');
   });
+
 
 $(function(){
   $('a.scroll-link[href^="#"]').on('click', function(event) {
@@ -65,14 +92,15 @@ $(function(){
 
 
 $(".burger").click(function(){
-
   $(".burger").toggleClass("active");
   $(".header__menu").slideToggle(300);
   $(".header__menu").toggleClass("active");
-  
-
 });
 
+$(".prices__button").click(function(){
+  $(this).toggleClass("active");
+  $(".prices__table-tr--hidden").toggleClass("active");
+});
 $(".happy-hours__button").click(function(){
   $('#input-stock').val(".");
     var stock = $('.happy-hours__stock').val();
