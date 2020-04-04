@@ -127,6 +127,8 @@ body{
     border-radius: 22px;
 
     transition: .3s;
+
+    
     
     &--theme-blue{
         color: $white;
@@ -135,6 +137,7 @@ body{
         box-shadow: 0px 8px 18px 0px rgba(104, 104, 104, 0.43);
         
         transition: .3s;
+        
 
         &:hover{
            box-shadow: 0 0 0 0 rgba(104, 104, 104, 0.43);
@@ -632,6 +635,12 @@ body{
         color: $black;
         font-weight: 600;
 
+
+        @include for-md{
+            font-size: 18px;
+            line-height: 21px;
+        }
+
         border-radius: 22.5px;
 
        
@@ -1124,6 +1133,10 @@ body{
 
             @include for-sm{
                 display: block;
+
+                color: $white;
+                
+                background-color: $orange;
             }
         }
 
@@ -1972,6 +1985,10 @@ body{
         border: 1px solid #1fb2f5;
         border-radius: 22.5px;
 
+        @include for-md{
+            font-size: 18px;
+            line-height: 21px;
+        }
         @include for-tiny-mob{
             text-align: center;
         }
@@ -1991,6 +2008,10 @@ body{
         border: 1px solid #1fb2f5;
         border-radius: 22.5px;
 
+        @include for-md{
+            font-size: 20px;
+            line-height: 23px;
+        }
         @include for-tiny-mob{
             text-align: center;
             padding: 40px 20px 5px;
@@ -2171,7 +2192,10 @@ body{
 
         border: 1px solid #dddddd;
         border-radius: 20.5px;
-
+        @include for-md{
+            font-size: 18px;
+            line-height: 21px;
+        }
         @include for-sm{
             max-width: 100%;
         }
@@ -2194,6 +2218,10 @@ body{
 
         &::placeholder{
             color: $black;
+        }
+        @include for-md{
+            font-size: 18px;
+            line-height: 21px;
         }
 
         @include for-sm{
