@@ -757,7 +757,13 @@ body{
         background-color: #ff7e00;
         border-radius: 5px;
         counter-reset: counter;
-        
+
+        @include for-lit-desktop{
+            padding: 115px 50px 115px 50px;
+        }
+        @include for-md{
+            padding: 50px 165px 50px 84px;
+        }
         @include for-sm{
             padding: 40px 30px;
             
@@ -803,6 +809,10 @@ body{
         }
         &--big-mb{
             margin-bottom: 20px;
+
+            @include for-md{
+                margin-bottom: 0;
+            }
         }
     }
     &__item-desc{
@@ -1211,6 +1221,14 @@ body{
 
         font-family: "Montserrat",sans-serif;
 
+        @include for-lit-desktop{
+            margin-right: 0;
+        }
+
+        @include for-md{
+            margin-right: 10px;
+        }
+
         @include for-tiny-mob{
             max-width: 100%;
             margin-right: 0;
@@ -1223,7 +1241,12 @@ body{
         box-sizing: border-box;
         padding-right: 35px;
 
+        @include for-lit-desktop{
+            flex-direction: column;
+        }
+
         @include for-md{
+            flex-direction: row;
             justify-content: center;
             margin-top: 30px;
             padding-right: 0;
@@ -1238,6 +1261,15 @@ body{
         line-height: 15px;
         font-family: $CirleF;
         font-weight: 300;
+
+        @include for-lit-desktop{
+            text-align: center;
+            margin-top: 15px;
+        }
+        @include for-md{
+           text-align: left;
+           margin-top: 0;
+        }
 
         @include for-tiny-mob{
             margin-top: 10px;
@@ -1481,6 +1513,14 @@ body{
     &__content{
         padding: 21px 30px 21px 30px;
 
+        @include for-lit-desktop{
+            padding: 15px;
+        }
+        @include for-md{
+            padding: 21px 30px 21px 30px;
+        }
+
+
         @include for-tiny-tablet{
             padding: 0 15px 30px;
         }
@@ -1513,6 +1553,13 @@ body{
     &__options{
         display: flex;
         flex-wrap: wrap;
+
+        @include for-lit-desktop{
+            flex-direction: column;
+        }
+        @include for-md{
+            flex-direction: row;
+        }
     }
     &__option{
         
@@ -1521,6 +1568,14 @@ body{
 
         &:not(:last-child){
             margin-right: 26px;
+        }
+    }
+    &__option + &__option{
+        @include for-lit-desktop{
+          margin-top: 5px;
+        }
+        @include for-md{
+            margin-top: 0;
         }
     }
     &__icon{
@@ -1870,7 +1925,7 @@ body{
         padding: 50px 20px;
     }
     &__form{
-        max-width: 195px;
+        max-width: 300px;
         margin: 0 auto;
         width: 100%;
 

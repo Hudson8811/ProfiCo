@@ -202,7 +202,7 @@ $("#form1").submit(function(){
     $.ajax({ 
         type: "POST", 
         url: "php/form.php",
-        data: $("#call-form3").serialize(),
+        data: $("#call-form4").serialize(),
         success: function(html) { 
         
         }
@@ -210,7 +210,7 @@ $("#form1").submit(function(){
     
    
     $('#thansk').modal();
-    $('#call-form-review').modal("hide");
+    $('#call-modal-review').modal("hide");
     /*$('.action_block .inputbox').removeClass("not-empty");*/
     $('#call-form4').trigger("reset");
     
