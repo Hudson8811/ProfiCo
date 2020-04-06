@@ -59,15 +59,6 @@ $(document).ready(function() {
 // console.log(new Date().getTime())
 
 
-new FlipDown((new Date().getTime() / 1000) - ((new Date().getHours() * 60 + new Date().getMinutes()) * 60 + new Date().getSeconds()) + 86400 )
-
-  // Start the countdown
-  .start()
- 
-  // Do something when the countdown ends
-  .ifEnded(() => {
-    console.log('The countdown has ended!');
-  });
 
 
 $(function(){
@@ -291,3 +282,12 @@ $("#form1").submit(function(){
       return false;
     });
     /**************************/
+
+
+    new FlipDown((new Date().getTime() / 1000) - ((new Date().getHours() * 60 + new Date().getMinutes()) * 60 + new Date().getSeconds()) + 86400 )
+
+  // Start the countdown
+  .start()
+ 
+  // Do something when the countdown ends
+  

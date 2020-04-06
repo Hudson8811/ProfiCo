@@ -408,7 +408,13 @@ body {
 
 @media (max-width: 991px) {
   .header__button {
-    display: none;
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .header__button {
+    max-width: 100%;
   }
 }
 

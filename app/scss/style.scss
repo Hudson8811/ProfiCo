@@ -387,7 +387,10 @@ body{
         width: 100%;
 
         @include for-md{
-            display: none;
+            margin: 20px auto;
+        }
+        @include for-tiny-mob{
+            max-width: 100%;
         }
     }
 
