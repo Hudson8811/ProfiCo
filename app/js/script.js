@@ -155,6 +155,25 @@ $('.header .inside-menu__link').click(function(){
     }
 }
   /**************************/
+  $("#program-modal").submit(function(){
+    if(!falidator(this)) return false;
+    $.ajax({ 
+        type: "POST", 
+        url: "php/form2.php",
+        data: $("#program-modal").serialize(),
+        success: function(html) { 
+        
+        }
+    });
+    
+    $('#call-modal2').modal("hide");
+    $('#thansk').modal();
+    /*$('.action_block .inputbox').removeClass("not-empty");*/
+    $('#program-modal').trigger("reset");
+    return false;
+  });
+  /**************************/
+  /**************************/
 $("#form1").submit(function(){
   if(!falidator(this)) return false;
   $.ajax({ 
