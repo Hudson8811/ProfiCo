@@ -2054,7 +2054,7 @@ body {
 
 @media (max-width: 650px) {
   .review-item__image-container {
-    height: 200px;
+    height: 250px;
     width: 100%;
     max-width: 300px;
     margin: 0 auto 20px;
@@ -2166,6 +2166,12 @@ body {
 
 .review-item__option:not(:last-child) {
   margin-right: 26px;
+}
+
+@media (max-width: 767px) {
+  .review-item__option:not(:last-child) {
+    margin-right: 20px;
+  }
 }
 
 @media (max-width: 1050px) {
