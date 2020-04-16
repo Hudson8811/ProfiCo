@@ -1667,6 +1667,9 @@ body{
             max-width: 100%;
         }
     }
+    .swiper-container-autoheight, .swiper-container-autoheight .swiper-slide{
+        height: 100%;
+    }
 }
 
 .review-item{

@@ -118,6 +118,8 @@ $('.header .inside-menu__link').click(function(){
 
   $('.reviews__slider .swiper-container').each(function(){
     var projectsSlider = new Swiper(this, {
+
+      autoHeight: true, //enable auto height
      
     navigation: {
         nextEl: $(this).parent().find('.swiper-button-next'),

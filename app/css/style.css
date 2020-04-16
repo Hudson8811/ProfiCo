@@ -2024,6 +2024,10 @@ body {
   }
 }
 
+.reviews .swiper-container-autoheight, .reviews .swiper-container-autoheight .swiper-slide {
+  height: 100%;
+}
+
 .review-item {
   display: -webkit-box;
   display: -ms-flexbox;
