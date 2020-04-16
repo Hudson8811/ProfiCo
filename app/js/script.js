@@ -305,10 +305,31 @@ $("#form1").submit(function(){
     /**************************/
 
 
-    new FlipDown((new Date().getTime() / 1000) - ((new Date().getHours() * 60 + new Date().getMinutes()) * 60 + new Date().getSeconds()) + 86400 )
+    new FlipDown(((new Date().getTime() / 1000) - ((new Date().getHours() * 60 + new Date().getMinutes()) * 60 + new Date().getSeconds()) + 86400 + 57600 ))
 
   // Start the countdown
   .start()
  
   // Do something when the countdown ends
   
+
+  setTimeout(function run(){
+    const date = new Date();
+    const time_units = date.getHours();
+    
+    if(time_units >= 12 && time_units < 16 ){
+    //если часы не видны, то делаем их видимыми
+      
+  
+    document.querySelector(".happy-hours__countdown-title").innerText = "До конца акции осталось:";     
+    $("#flipdown").removeClass("hidden");          
+    }
+    else{
+    //если часы видны, то делаем их невидимыми
+    
+    document.querySelector(".happy-hours__countdown-title").innerText = "Акция скоро возобновится!";
+    $("#flipdown").addClass("hidden");       
+    }
+    
+    setTimeout(run, 60 * 1000)
+    }, 1000)

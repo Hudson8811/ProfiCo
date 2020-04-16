@@ -1467,7 +1467,9 @@ body{
         }
     }
 } 
-
+.flipdown.hidden{
+    display: none !important;
+}
 .flipdown.flipdown__theme-dark{
     width: auto;
     height: auto;
