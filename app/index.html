@@ -7,9 +7,8 @@
  
     <link rel="stylesheet" href="css/vendor.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <title>ПрофиМастер - выездной ремонт любой сложности</title>
@@ -201,9 +200,9 @@
                                 <p class="hero__desc">
                                     <span class="text text--white">Отремонтируем любую поломку в течение</span> <b class="text text--blue">3 часов</b>
                                 </p>
-                                <form class="hero__form" action="php/master-form.php" method="POST" id="form1">
+                                <form class="hero__form"  id="form1">
                                     <span class="hero__input-container">
-                                        <input class="hero__input inputbox numbox form-control" type="text" name="phone" placeholder="Введите Ваш номер" required>
+                                        <input class="hero__input inputbox numbox form-control" type="tel" name="phone" placeholder="Введите Ваш номер" required>
                                     </span>
                                     <button class="hero__button button button--font-tiny button--size-big button--theme-blue" type="submit">Вызвать мастера</button>
                                 </form>
@@ -1620,7 +1619,7 @@
                                   8-812-603-2681
                                 </a>
                             </div>
-                            <form class="contacts__form" id="call-form2" action="php/form.php" method="POST" >
+                            <form class="contacts__form" id="call-form2"  >
                                 <h3 class="contacts__form-title">
                                     Задайте нам вопрос
                                 </h3>
@@ -1629,7 +1628,7 @@
                                         <input class="contacts__input inputbox" type="text" name="name" placeholder="Ваше имя" required> 
                                     </span>
                                     <span class="contacts__item-container contacts__item-container--w50">
-                                        <input class="contacts__input inputbox numbox" name="phone" type="text" placeholder="Ваш телефон" required>
+                                        <input class="contacts__input inputbox numbox" name="phone" type="tel" placeholder="Ваш телефон" required>
                                     </span>
                                     <span class="contacts__item-container contacts__item-container--w100">
                                         <textarea class="textarea contacts__textarea" name="textarea" placeholder="Ваш комментарий" required></textarea>
@@ -1724,12 +1723,12 @@
                 <p class="modal__subtitle">
                     Заполните форму ниже и мы перезвоним Вам через 5 минут
                 </p>
-                <form class="modal__form" id="call-form3" action="php/form.php" method="POST">
+                <form class="modal__form" id="call-form3" >
                     <span class="modal__input-container">
                         <input class="modal__input inputbox form-control" type="text" name="name"  placeholder="Ваше имя" required>
                     </span>
                     <span class="modal__input-container">
-                        <input class="modal__input inputbox numbox form-control" name="phone" type="text"  placeholder="Ваш телефон" required>
+                        <input class="modal__input inputbox numbox form-control" name="phone" type="tel"  placeholder="Ваш телефон" required>
                     </span>
                     <button class="button modal__button button--font-tiny button--size-big button--theme-blue" type="submit">
                         Связаться с нами
@@ -1761,15 +1760,15 @@
                 <p class="modal__subtitle">
                     Заполните форму ниже и мы перезвоним Вам через 5 минут
                 </p>
-                <form class="modal__form" id="call-form5" action="php/form-stock.php" method="POST">
+                <form class="modal__form" id="call-form5" >
                     <span class="modal__input-container">
                         <input class="modal__input inputbox form-control" type="text" name="name"  placeholder="Ваше имя" required>
                     </span>
                     <span class="modal__input-container">
-                        <input class="modal__input inputbox numbox form-control" name="phone" type="text"  placeholder="Ваш телефон" required>
+                        <input class="modal__input inputbox numbox form-control" name="phone" type="tel"  placeholder="Ваш телефон" required>
                     </span>
                     <span class="modal__input-container modal__input-container--hide">
-                        <input class="modal__input inputbox numbox form-control" id="input-stock" name="stock" type="text" value="">
+                        <input class="modal__input inputbox  form-control" id="input-stock" name="stock" type="text" value="">
                     </span>
                     <button class="button modal__button button--font-tiny button--size-big button--theme-blue" type="submit">
                         Связаться с нами
@@ -1801,15 +1800,15 @@
                 <p class="modal__subtitle">
                     Заполните форму ниже и мы перезвоним Вам через 5 минут
                 </p>
-                <form class="modal__form" id="call-form6" action="php/form-service.php" method="POST">
+                <form class="modal__form" id="call-form6" >
                     <span class="modal__input-container">
                         <input class="modal__input inputbox form-control" type="text" name="name"  placeholder="Ваше имя" required>
                     </span>
                     <span class="modal__input-container">
-                        <input class="modal__input inputbox numbox form-control" name="phone" type="text"  placeholder="Ваш телефон" required>
+                        <input class="modal__input inputbox numbox form-control" name="phone" type="tel"  placeholder="Ваш телефон" required>
                     </span>
                     <span class="modal__input-container modal__input-container--hide">
-                        <input class="modal__input inputbox numbox form-control" id="input-service" name="service" type="text" value="">
+                        <input class="modal__input inputbox  form-control" id="input-service" name="service" type="text" value="">
                     </span>
                     <button class="button modal__button button--font-tiny button--size-big button--theme-blue" type="submit">
                         Связаться с нами
@@ -1841,12 +1840,12 @@
                 <p class="modal__subtitle">
                     Заполните форму ниже и мы перезвоним Вам через 5 минут
                 </p>
-                <form class="modal__form" id="call-form4" action="php/form2.php" method="POST">
+                <form class="modal__form" id="call-form4" >
                     <span class="modal__input-container">
                         <input class="modal__input inputbox form-control" type="text" name="name"  placeholder="Ваше имя" required>
                     </span>
                     <span class="modal__input-container">
-                        <input class="modal__input inputbox numbox form-control" name="phone" type="text"  placeholder="Ваш телефон" required>
+                        <input class="modal__input inputbox numbox form-control" name="phone" type="tel"  placeholder="Ваш телефон" required>
                     </span>
                     <span class="modal__input-container">
                         <textarea class="modal__textarea textarea" name="textarea__review"  placeholder="Ваш отзыв"></textarea>
@@ -1909,37 +1908,7 @@
     
     <script src="js/script.js"></script>
 
-    <script>
-<<<<<<< HEAD
-      ymaps.ready(function () {
-        var myMap = new ymaps.Map('map', {
-                center: [55.751574, 37.573856],
-                zoom: 9,
-           controls: []
-            }, {
-                searchControlProvider: 'yandex#search'
-            }),
-            // Создаём макет содержимого.
-            MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-                '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-            ),
-            myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-               
-            }, {
-                // Опции.
-                // Необходимо указать данный тип макета.
-                iconLayout: 'default#image',
-                // Своё изображение иконки метки.
-                iconImageHref: 'img/map_marker.png',
-                // Размеры метки.
-               iconImageHref: 'img/icons/location-pin.svg',
-                // Размеры метки.
-                iconImageSize: [61, 88],
-            });
-        myMap.geoObjects
-            .add(myPlacemark)
-    });
-=======
+    <!-- <script>
         // Google Maps API Lazy Load AFTERSCRIPTS
 // START
 // ===============================================
@@ -2220,9 +2189,8 @@ b.clientHeight,height:a.clientHeight||b.clientHeight}}return this._expandRectByR
         }
 
         google_maps_lazyload("AIzaSyCD_HZB_NiuHcNU84XgkQBwepEYEnR296g") 
-    </script>
+    </script> -->
     <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCD_HZB_NiuHcNU84XgkQBwepEYEnR296g&callback=initMap" async defer>
->>>>>>> parent of 2208407... urpade
     </script>
     <script>
         
