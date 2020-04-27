@@ -704,6 +704,22 @@ body {
   }
 }
 
+.hero__form-desc {
+  margin-top: 10px;
+  max-width: 500px;
+  font-size: 12px;
+  line-height: 15px;
+  font-family: "Circe", sans-serif;
+  font-weight: 300;
+  color: #e8e8e8;
+}
+
+@media (max-width: 500px) {
+  .hero__form-desc {
+    text-align: center;
+  }
+}
+
 .hero__input-container {
   max-width: 278px;
   margin-right: 11px;

@@ -618,6 +618,20 @@ body{
             flex-direction: column;
         }
     }
+    &__form-desc{
+        margin-top: 10px;
+        max-width: 500px;
+
+        font-size: 12px;
+        line-height: 15px;
+        font-family: $CirleF;
+        font-weight: 300;
+        color: $grey;
+
+        @include for-tiny-mob(){
+            text-align: center;
+        }
+    }
     &__input-container{
         max-width: 278px;
         margin-right: 11px;
